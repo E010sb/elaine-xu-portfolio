@@ -3531,6 +3531,67 @@ p {
   opacity: 1;
 }
 
+.anx-archive-hero {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 62% 42%, rgba(255, 104, 189, 0.18), transparent 38%),
+    linear-gradient(180deg, #080508 0%, #120812 62%, #080508 100%);
+  perspective: 750px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.anx-archive-logo-solid {
+  position: relative;
+  width: 82%;
+  height: 82%;
+  transform-style: preserve-3d;
+  animation: anx-logo-turn 8s linear infinite;
+}
+
+.anx-archive-logo-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  filter: brightness(0) invert(71%) sepia(50%) saturate(2411%) hue-rotate(285deg) brightness(102%) contrast(101%) drop-shadow(0 0 12px rgba(255, 104, 189, 0.28));
+  backface-visibility: hidden;
+}
+
+.anx-archive-logo-depth {
+  opacity: 0.52;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(76%) saturate(2468%) hue-rotate(290deg) brightness(83%) contrast(98%);
+}
+
+.anx-archive-logo-face { transform: translateZ(12px); }
+.anx-archive-logo-back { transform: rotateY(180deg) translateZ(12px); }
+.anx-archive-logo-solid .depth-01 { transform: translateZ(-10px); }
+.anx-archive-logo-solid .depth-02 { transform: translateZ(-3px); }
+.anx-archive-logo-solid .depth-03 { transform: translateZ(4px); }
+.anx-archive-logo-solid .depth-04 { transform: translateZ(9px); }
+
+.hover-preview.is-anx-hero .hover-preview-default {
+  opacity: 0;
+}
+
+.hover-preview.is-anx-hero .anx-archive-hero {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anx-archive-logo-solid {
+    animation: none;
+    transform: rotateX(-7deg) rotateY(18deg);
+  }
+}
+
 .text-link {
   display: inline-block;
   margin-left: calc((100% - 40px) / 12 * 2 + 40px);
