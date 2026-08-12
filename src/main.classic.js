@@ -134,7 +134,7 @@ const risoWork = {
 const anxWork = {
   title: "ANX",
   image: "public/images/anx/fashion-board.jpg",
-  href: "/work/anx",
+  href: "/case-studies/anx/",
   fileHref: "case-studies/anx/index.html",
 };
 
@@ -587,6 +587,16 @@ function renderLegacyWorkList() {
           <span class="abc-archive-hero" aria-hidden="true">
             <img class="abc-archive-sky" src="${assetPath("public/images/abc/hero-cloud-cotton-background.png")}" alt="" />
             <img class="abc-archive-product" src="${assetPath("public/images/abc/series-cloud-cotton-cutout.png")}" alt="" />
+          </span>
+          <span class="anx-archive-hero" aria-hidden="true">
+            <span class="anx-archive-logo-solid">
+              <img class="anx-archive-logo-layer anx-archive-logo-depth depth-01" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+              <img class="anx-archive-logo-layer anx-archive-logo-depth depth-02" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+              <img class="anx-archive-logo-layer anx-archive-logo-depth depth-03" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+              <img class="anx-archive-logo-layer anx-archive-logo-depth depth-04" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+              <img class="anx-archive-logo-layer anx-archive-logo-face" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+              <img class="anx-archive-logo-layer anx-archive-logo-back" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" />
+            </span>
           </span>
         </div>
         ${archiveProjects
@@ -1834,6 +1844,7 @@ function attachInteractions() {
       if (!preview) return;
       preview.classList.add("visible");
       preview.classList.toggle("is-abc-hero", project.name === "ABC Silk Care");
+      preview.classList.toggle("is-anx-hero", project.name === "ANX");
       preview.style.top = `${row.offsetTop - 44}px`;
       const previewImage = preview.querySelector(".hover-preview-default");
       if (previewImage) previewImage.src = assetPath(localImages[project.name] || project.images[0].src);
