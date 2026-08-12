@@ -177,7 +177,7 @@ const archiveProjects = [
     caseStudyRoute: risoWork.href,
     caseStudyFileHref: risoWork.fileHref,
   },
-  ...projects.slice(4),
+  ...projects.slice(4).filter((project) => !["CutHouse", "ERMINE"].includes(project.name)),
 ];
 
 const haitouCaseStudy = {
@@ -587,7 +587,6 @@ function renderLegacyWorkList() {
             },
           )
           .join("")}
-        <a class="text-link reveal" href="https://www.figma.com/proto/xTsRsuostx8NZbfkeoB6st/Concepts" target="_blank" rel="noreferrer">View Figma concept work</a>
       </div>
     </section>
   `;
