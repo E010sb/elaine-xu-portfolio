@@ -80,7 +80,7 @@ const localImages = {
   "Highful Minds": "public/images/images_highful_minds_highful-minds-lg.jpg",
   BOX: "public/images/images_box_box-lg.jpg",
   Erfling: "public/images/images_erfling_erfling-lg.jpg",
-  "Merchant Genie": "public/images/images_merchant_genie_genie-lg.jpg",
+  ANX: "public/images/anx/fashion-board.jpg",
   CutHouse: "public/images/images_cuthouse_cuthouse-lg.jpg",
   ERMINE: "public/images/images_ermine_ermine-lg.jpg",
 };
@@ -131,6 +131,23 @@ const risoWork = {
   fileHref: "case-studies/riso-thaiboy/index.html",
 };
 
+const anxWork = {
+  title: "ANX",
+  image: "public/images/anx/fashion-board.jpg",
+  href: "/work/anx",
+  fileHref: "case-studies/anx/index.html",
+};
+
+const anxArchiveProject = {
+  name: "ANX",
+  type: "[fashion brand universe]",
+  category: ["Brand Identity", "Experiential Design"],
+  backgroundColors: { light: "#F6A8D8", dark: "#090609" },
+  images: [{ src: anxWork.image, alt: "ANX Asian Futurism fashion brand campaign" }],
+  caseStudyRoute: anxWork.href,
+  caseStudyFileHref: anxWork.fileHref,
+};
+
 const archiveProjects = [
   {
     name: "Mizone",
@@ -177,7 +194,7 @@ const archiveProjects = [
     caseStudyRoute: risoWork.href,
     caseStudyFileHref: risoWork.fileHref,
   },
-  ...projects.slice(4),
+  ...projects.slice(4).map((project) => (project.name === "Merchant Genie" ? anxArchiveProject : project)),
 ];
 
 const haitouCaseStudy = {
@@ -1397,6 +1414,173 @@ function renderRisoThaiboyCaseStudy() {
 }
 
 
+function renderAnxCaseStudy() {
+  const anxImage = (path) => assetPath(`public/images/anx/${path}`);
+  app.innerHTML = `
+    <div class="site anx-page">
+      ${renderGlobalNav()}
+      <main class="anx-main">
+        <section class="anx-hero" aria-label="ANX Asian Futurism fashion campaign">
+          <div class="anx-hero-wash" aria-hidden="true"></div>
+          <div class="anx-hero-logo-stage" aria-label="Rotating three-dimensional ANX logo">
+            <div class="anx-hero-logo-solid">
+              <img class="anx-hero-logo-layer anx-hero-logo-depth depth-01" src="${anxImage("anx-logo-transparent.png")}" alt="" aria-hidden="true" />
+              <img class="anx-hero-logo-layer anx-hero-logo-depth depth-02" src="${anxImage("anx-logo-transparent.png")}" alt="" aria-hidden="true" />
+              <img class="anx-hero-logo-layer anx-hero-logo-depth depth-03" src="${anxImage("anx-logo-transparent.png")}" alt="" aria-hidden="true" />
+              <img class="anx-hero-logo-layer anx-hero-logo-depth depth-04" src="${anxImage("anx-logo-transparent.png")}" alt="" aria-hidden="true" />
+              <img class="anx-hero-logo-layer anx-hero-logo-face" src="${anxImage("anx-logo-transparent.png")}" alt="ANX logo" />
+              <img class="anx-hero-logo-layer anx-hero-logo-back" src="${anxImage("anx-logo-transparent.png")}" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+
+        <section class="anx-section anx-overview">
+          <span class="anx-section-index">02</span>
+          <header class="anx-section-heading reveal"><p>Project Overview</p><h2>Fashion as a space between comfort and uncertainty.</h2></header>
+          <div class="anx-content-row reveal"><p class="anx-content-label">Project Summary</p><div><p>ANX is an experimental fashion brand concept inspired by Asian futurism, youth culture, and the relationship between comfort and uncertainty.</p><p>The brand explores fashion as a form of self-expression through bold visual language, unconventional silhouettes, and immersive experiences.</p></div></div>
+          <dl class="anx-meta reveal"><div><dt>Project Type</dt><dd>Fashion Brand Identity / Experiential Design</dd></div><div><dt>Role</dt><dd>Brand Designer</dd></div><div><dt>Deliverables</dt><dd>Brand Identity / Campaign Design / Event Experience / Digital Exploration</dd></div></dl>
+        </section>
+
+        <section class="anx-section anx-concept">
+          <span class="anx-section-index">03</span>
+          <header class="anx-section-heading reveal"><p>Brand Concept</p><h2>Building the ANX Universe</h2></header>
+          <div class="anx-mission reveal"><p class="anx-content-label">Brand Mission</p><p>ANX turns raw emotion into bold, contemporary fashion—helping people express confidence, energy, and individuality through experimental design that breaks traditional rules.</p></div>
+          <div class="anx-manifesto-grid reveal">
+            <article><strong>AN</strong><span>Familiarity / Calm / Foundation</span><p>Drawn from the Chinese character 安, “AN” represents safety, stability, and the grounding force of identity.</p></article>
+            <article><strong>X</strong><span>Risk / Experimentation / Unknown</span><p>“X” represents uncertainty: the future-facing territory where convention breaks and new identities emerge.</p></article>
+          </div>
+          <blockquote class="anx-statement reveal">Together, ANX creates a space where individuals move beyond traditional expectations without losing their foundation.</blockquote>
+          <div class="anx-mood-grid"><figure class="reveal"><img src="${anxImage("mood-01.jpg")}" alt="ANX beauty and fashion mood references" /></figure><figure class="reveal"><img src="${anxImage("mood-02.jpg")}" alt="ANX experimental streetwear and youth culture references" /></figure></div>
+          <div class="anx-audience reveal">
+            <header><p>Target Audience</p><h3>A global creative generation living between cultures.</h3></header>
+            <div class="anx-audience-grid">
+              <article><span>01 / Profile</span><h4>18–32 · Gender-inclusive</h4><p>Gen Z and young Millennials in fashion-forward cities including Tokyo, Seoul, Shanghai, Hong Kong, Singapore, New York, London, Paris, and Berlin—with strong relevance to the global Asian diaspora.</p></article>
+              <article><span>02 / Mindset</span><h4>Future-facing self-expression</h4><p>Creative, trend-aware consumers drawn to Asian subcultures, nightlife, rave communities, anime, gaming, cyberpunk, digital fashion, and identities that feel avant-garde rather than conventional.</p></article>
+              <article><span>03 / Lifestyle</span><h4>Culture makers, not spectators</h4><p>Fashion designers, stylists, creative directors, musicians, DJs, photographers, artists, and young professionals—often studying or working across art, fashion, media, design, and global culture.</p></article>
+              <article><span>04 / Media &amp; Buying</span><h4>Editorially informed</h4><p>They follow i-D, Dazed, Vogue China, Nylon Japan, Highsnobiety, Instagram, TikTok, and Xiaohongshu; mix luxury with streetwear; and may spend $300–$1,500 on expressive limited pieces.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="anx-section anx-identity">
+          <span class="anx-section-index">04</span>
+          <header class="anx-section-heading reveal"><p>Visual Identity</p><h2>Defining the Visual Language</h2></header>
+          <div class="anx-content-row reveal"><p class="anx-content-label">Identity System</p><p>The identity combines Asian cultural references with futuristic digital aesthetics. Distorted typography, experimental forms, synthetic textures, and sharp contrast form a flexible language that can move from garment to screen to space.</p></div>
+          <div class="anx-identity-principles reveal"><span>Distorted Typography</span><span>Experimental Forms</span><span>Futuristic Textures</span><span>Bold Contrast</span></div>
+          <div class="anx-identity-extracted">
+            <section class="anx-identity-spec anx-logo-spec reveal">
+              <header class="anx-spec-heading"><span>01</span><div><p>Logo System</p><h3>One mark, three scales.</h3></div></header>
+              <div class="anx-logo-variant-grid">
+                <figure class="anx-logo-variant anx-logo-variant-dark"><img src="${anxImage("anx-logo-transparent.png")}" alt="ANX black logo" /><figcaption>Primary / Black</figcaption></figure>
+                <figure class="anx-logo-variant anx-logo-variant-light"><img src="${anxImage("anx-logo-transparent.png")}" alt="ANX white logo" /><figcaption>Reverse / White</figcaption></figure>
+              </div>
+              <div class="anx-logo-scale-grid">
+                <article><div class="anx-logo-scale-mark is-large"><img src="${anxImage("anx-logo-transparent.png")}" alt="Large ANX logo" /></div><div><strong>L</strong><span>Large</span><p>Posters · Ads · Covers</p></div></article>
+                <article><div class="anx-logo-scale-mark is-medium"><img src="${anxImage("anx-logo-transparent.png")}" alt="Medium ANX logo" /></div><div><strong>M</strong><span>Medium</span><p>Presentations · Web · Lookbook</p></div></article>
+                <article><div class="anx-logo-scale-mark is-small"><img src="${anxImage("anx-logo-transparent.png")}" alt="Small ANX logo" /></div><div><strong>S</strong><span>Small</span><p>Tags · Search Bar</p></div></article>
+              </div>
+            </section>
+
+            <section class="anx-identity-spec anx-type-spec reveal">
+              <header class="anx-spec-heading"><span>02</span><div><p>Typography</p><h3>Editorial impact, functional clarity.</h3></div></header>
+              <div class="anx-type-grid">
+                <article>
+                  <p class="anx-type-role">Display Font</p>
+                  <strong>Kailasa Bold</strong>
+                  <span>48 pt · Branding / Headlines</span>
+                  <div class="anx-type-sample anx-type-display">ANX / ASIAN FUTURISM</div>
+                </article>
+                <article>
+                  <p class="anx-type-role">Body Font</p>
+                  <strong>Kailasa Regular</strong>
+                  <span>24 pt · Body Text</span>
+                  <div class="anx-type-sample anx-type-body">Fashion, digital culture, and identity converge in a world built for the unknown.</div>
+                </article>
+              </div>
+            </section>
+
+            <section class="anx-identity-spec anx-color-spec reveal">
+              <header class="anx-spec-heading"><span>03</span><div><p>Color Palette</p><h3>Black / Pink / White / Violet</h3></div></header>
+              <div class="anx-swatch-grid">
+                <article class="anx-swatch anx-swatch-pink"><span>Pink</span><strong>#FA7DCC</strong></article>
+                <article class="anx-swatch anx-swatch-black"><span>Black</span><strong>#000000</strong></article>
+                <article class="anx-swatch anx-swatch-white"><span>White</span><strong>#FFFFFF</strong></article>
+                <article class="anx-swatch anx-swatch-violet"><span>Violet</span><strong>#8000FF</strong></article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="anx-section anx-fashion">
+          <span class="anx-section-index">05</span>
+          <header class="anx-section-heading reveal"><p>Fashion Direction</p><h2>Translating Identity Into Fashion</h2></header>
+          <div class="anx-content-row reveal"><p class="anx-content-label">Art Direction</p><p>ANX translates its identity into unconventional silhouettes, futuristic materials, and assertive styling. Cyber-inspired environments and Asian cultural influences meet the pacing and scale of a high-fashion editorial.</p></div>
+          <div class="anx-direction-grid reveal">
+            <article><span>01</span><div><h3>Models &amp; Styling</h3><p>Asian models in experimental silhouettes, mixing leather, latex, metallics, denim, and futuristic fabrics. Poses feel awkward yet powerful; the tone is raw, emotionally direct, and unapologetic.</p></div></article>
+            <article><span>02</span><div><h3>Setting</h3><p>Neon-lit Tokyo or Seoul cityscapes, chrome reflections, and visual collisions between calligraphy, dragons, silk, lotus forms, and digital or sci-fi elements.</p></div></article>
+            <article><span>03</span><div><h3>Graphic Language</h3><p>Condensed typography, distortion, glitches, holographic layers, and hybrid treatments that connect Latin letterforms with Asian character references.</p></div></article>
+            <article><span>04</span><div><h3>Color &amp; Texture</h3><p>Deep red, indigo, jade, and gold meet black, chrome silver, electric blue, and saturated magenta across latex, denim, metallic vinyl, and translucent surfaces.</p></div></article>
+          </div>
+          <div class="anx-creative-research reveal">
+            <header><p>Creative References</p><h3>References selected for cultural tension, surreal beauty, and constructed worlds.</h3></header>
+            <div class="anx-creative-grid">
+              <article><span>Photography / Illustration</span><h4>Cho Gi-Seok</h4><p>Surreal emotion where tradition meets digital futurism. Reference: Gentle Monster’s “The Dreamer.”</p></article>
+              <article><span>Photography / Illustration</span><h4>Leslie Zhang</h4><p>Saturated, cinematic East Asian beauty. Reference: Vogue China’s “Youth in Motion.”</p></article>
+              <article><span>Photography / Illustration</span><h4>Nhu Xuan Hua</h4><p>Fragmented identity through collage and 3D distortion. Reference: “Dazed Beauty: Data Portraits.”</p></article>
+              <article><span>Makeup</span><h4>Isamaya Ffrench</h4><p>Prosthetics and digital culture used as image-making tools. References: Byredo Beauty and futuristic face design.</p></article>
+              <article><span>Makeup</span><h4>Kane Kok · Hiromi Ueda</h4><p>Glass-skin luminosity and sculptural softness. References: Vogue Singapore and Burberry Beauty.</p></article>
+              <article><span>Fashion Styling</span><h4>Lotta Volkova</h4><p>Subculture codes recontextualized inside luxury fashion. References: Balenciaga and Mowalola FW21.</p></article>
+              <article><span>Fashion Styling</span><h4>Dazed Korea · Mimi Kim</h4><p>Seoul streetwear and futuristic layering. References: “Future Seoul” and W Korea’s “Neo-Edge.”</p></article>
+              <article><span>Set &amp; Props</span><h4>Gary Card · Shona Heath · Ken Ngan</h4><p>Sculptural fantasy and LED-driven space. References: Objects Nomades, Vogue Italia, Dior, and Gentle Monster.</p></article>
+            </div>
+          </div>
+          <div class="anx-production-direction reveal">
+            <div><p class="anx-content-label">Shoot Locations</p><ul><li><strong>Tokyo</strong><span>Shibuya underground garages · urban neon and controlled chaos</span></li><li><strong>Hong Kong</strong><span>Quarry Bay apartments · dense geometry and concrete confinement</span></li><li><strong>Los Angeles</strong><span>Downtown warehouse · an open setting for ANX’s global cultural hybridity</span></li></ul></div>
+            <div><p class="anx-content-label">Visual Direction</p><dl><div><dt>Palette</dt><dd>Chrome silver · electric blue · saturated magenta</dd></div><div><dt>Textures</dt><dd>Latex · denim · metallic vinyl</dd></div><div><dt>Lighting</dt><dd>Hard spotlights · ambient neon</dd></div><div><dt>Tone</dt><dd>Dystopian youth power—raw, emotional, cinematic</dd></div></dl></div>
+          </div>
+        </section>
+
+        <section class="anx-section anx-campaign">
+          <span class="anx-section-index">06</span>
+          <header class="anx-section-heading reveal"><p>Pop-Up Collaboration</p><h2>Still Iconic at 00:00</h2></header>
+          <div class="anx-campaign-intro reveal"><p class="anx-content-label">ANX × Club 00:00</p><div><p>A one-night fashion pop-up in New York City where ANX’s experimental identity enters the energy of Club 00:00.</p><p>The collaboration turns nightlife into a live brand experience—part fashion presentation, part cultural gathering, and part collective performance.</p></div></div>
+          <div class="anx-campaign-brief reveal">
+            <article><span>01</span><h3>Pop-Up Concept</h3><p>Built around one attitude: when the night gets out of control, the look stays iconic. The pop-up celebrates fashion lovers who transform chaos, confidence, and creative energy into personal expression.</p></article>
+            <article><span>02</span><h3>Art Direction</h3><p>Blurred motion, sweat, neon reflections, and late-night haze contrast with precise silhouettes and statement pieces—capturing raw nightlife glamour without compromising the fashion.</p></article>
+            <article><span>03</span><h3>Experience Narrative</h3><p>At midnight, the city glitches: reality bends and the night takes over. Every guest becomes part of the ANX universe—illuminated, chaotic, and unforgettable.</p></article>
+          </div>
+          <figure class="anx-campaign-hero reveal"><img src="${anxImage("campaign-poster.png")}" alt="ANX Still Iconic at 00:00 pop-up collaboration poster and New York City placement" /></figure>
+          <div class="anx-campaign-grid"><figure class="reveal"><img src="${anxImage("campaign-city.jpg")}" alt="ANX and Club 00:00 pop-up campaign poster in New York City" /></figure><figure class="reveal"><img src="${anxImage("store.jpg")}" alt="ANX fashion pop-up environment for the Club 00:00 collaboration" /></figure></div>
+        </section>
+
+        <section class="anx-section anx-digital">
+          <span class="anx-section-index">07</span>
+          <header class="anx-section-heading reveal"><p>Brand Extensions</p><h2>Extending ANX Beyond Reality</h2></header>
+          <div class="anx-content-row reveal"><p class="anx-content-label">Brand Touchpoints</p><p>ANX expands beyond physical fashion through its website, social campaigns, branded objects, retail packaging, and editorial lookbook.</p></div>
+          <div class="anx-touchpoint-row" aria-label="ANX brand touchpoints">
+            <article class="anx-touchpoint-card reveal"><figure><img src="${anxImage("anx-website-transparent.png")}" alt="Three isolated ANX fashion website views showing the complete homepage, hero collection layout, and new arrivals product grid" /></figure><div><span>01</span><h3>E-Commerce Website</h3><p>The ANX identity extends into a complete fashion website across the homepage, collection story, category navigation, and product discovery.</p></div></article>
+            <article class="anx-touchpoint-card reveal"><figure><img src="${anxImage("social-transparent-v2.png")}" alt="Three complete ANX social campaign posts isolated with clean transparent spacing" /></figure><div><span>02</span><h3>Social Campaign</h3><p>Editorial imagery is translated into a repeatable social format with a consistent ANX signature.</p></div></article>
+            <article class="anx-touchpoint-card reveal"><figure><img src="${anxImage("brand-objects-transparent.png")}" alt="Isolated ANX hangtag logo charm and garment application" /></figure><div><span>03</span><h3>Branded Accessories</h3><p>The angular identity becomes a tactile hangtag and dimensional charm attached directly to garments.</p></div></article>
+            <article class="anx-touchpoint-card reveal"><figure><img src="${anxImage("retail-transparent.png")}" alt="Two isolated ANX retail shopping bags" /></figure><div><span>04</span><h3>Retail Packaging</h3><p>Black, violet, and fluorescent pink extend the system into a recognizable shopping-bag family.</p></div></article>
+            <article class="anx-touchpoint-card reveal"><figure><img src="${anxImage("fashion-board.jpg")}" alt="ANX fashion lookbook and campaign direction" /></figure><div><span>05</span><h3>Lookbook</h3><p>The final lookbook brings ANX styling, silhouette, color, and campaign attitude into one editorial fashion story.</p></div></article>
+          </div>
+        </section>
+
+        <section class="anx-section anx-reflection">
+          <span class="anx-section-index">08</span>
+          <header class="anx-section-heading reveal"><p>Project Reflection</p><h2>Design Reflection</h2></header>
+          <div class="anx-reflection-grid"><article class="reveal"><span>What Worked</span><h3>A complete world, not just a mark.</h3><p>This project allowed me to explore how a fashion brand can be developed beyond visual identity, creating a connected ecosystem across products, campaigns, spaces, and digital experiences.</p></article><article class="reveal"><span>Future Opportunities</span><h3>From concept to cultural platform.</h3><p>Future development could explore real-world collaborations, digital fashion experiences, and immersive brand activations that invite audiences to shape the ANX universe.</p></article></div>
+        </section>
+      </main>
+      ${renderFooter()}
+      <div class="cursor" data-cursor></div><div class="modal-root" data-modal-root></div>
+    </div>
+  `;
+  attachInteractions();
+  window.scrollTo({ top: 0, left: 0 });
+}
+
+
 function renderBalenciagaNoirCaseStudy() {
   const noirImage = (path) => assetPath(`public/images/balenciaga-noir/${path}`);
   app.innerHTML = `
@@ -2066,6 +2250,8 @@ if (currentPage === "haitou") {
   renderBalenciagaNoirCaseStudy();
 } else if (currentPage === "riso-thaiboy") {
   renderRisoThaiboyCaseStudy();
+} else if (currentPage === "anx") {
+  renderAnxCaseStudy();
 } else if (currentPage === "work") {
   renderWorksPage();
 } else if (currentPage === "about") {
