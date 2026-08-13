@@ -3,6 +3,36 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/work/haitou",
+      "destination": "/case-studies/haitou/",
+      "permanent": true
+    },
+    {
+      "source": "/work/mizone",
+      "destination": "/case-studies/mizone/",
+      "permanent": true
+    },
+    {
+      "source": "/work/abc-silk-care",
+      "destination": "/case-studies/abc-silk-care/",
+      "permanent": true
+    },
+    {
+      "source": "/work/fizz",
+      "destination": "/case-studies/fizz/",
+      "permanent": true
+    },
+    {
+      "source": "/work/balenciaga-noir",
+      "destination": "/case-studies/balenciaga-noir/",
+      "permanent": true
+    },
+    {
+      "source": "/work/riso-thaiboy",
+      "destination": "/case-studies/riso-thaiboy/",
+      "permanent": true
+    },
+    {
       "source": "/work/anx",
       "destination": "/case-studies/anx/",
       "permanent": true

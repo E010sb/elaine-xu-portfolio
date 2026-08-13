@@ -90,7 +90,7 @@ const featuredWork = {
   description:
     "Helping international students discover visa-sponsored job opportunities through a clearer and more intuitive hiring experience.",
   image: "public/images/haitou-selected-work-card.png",
-  href: "/work/haitou",
+  href: "/case-studies/haitou/",
   fileHref: "case-studies/haitou/index.html",
 };
 
@@ -99,35 +99,35 @@ const mizoneWork = {
   title: "Mizone",
   image: "public/images/mizone/home/mizone-selected-work-cover-v2.png",
   labelPosition: "top",
-  href: "/work/mizone",
+  href: "/case-studies/mizone/",
   fileHref: "case-studies/mizone/index.html",
 };
 
 const abcWork = {
   title: "ABC Silk Care",
   image: "public/images/abc/hero-final-packaging.png",
-  href: "/work/abc-silk-care",
+  href: "/case-studies/abc-silk-care/",
   fileHref: "case-studies/abc-silk-care/index.html",
 };
 
 const fizzWork = {
   title: "FIZZ",
   image: "public/images/fizz/hero-four-cans.png",
-  href: "/work/fizz",
+  href: "/case-studies/fizz/",
   fileHref: "case-studies/fizz/index.html",
 };
 
 const noirWork = {
   title: "Balenciaga Noir Salon",
   image: "public/images/balenciaga-noir/hero-lookbook.png",
-  href: "/work/balenciaga-noir",
+  href: "/case-studies/balenciaga-noir/",
   fileHref: "case-studies/balenciaga-noir/index.html",
 };
 
 const risoWork = {
   title: "Thaiboy Digital",
   image: "public/images/riso-thaiboy/hero-hands.png",
-  href: "/work/riso-thaiboy",
+  href: "/case-studies/riso-thaiboy/",
   fileHref: "case-studies/riso-thaiboy/index.html",
 };
 
