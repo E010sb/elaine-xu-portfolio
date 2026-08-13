@@ -532,7 +532,7 @@ function renderFooter() {
         ${sectionTitle("Let's Work Together", "section-heading-compact")}
         <p class="footer-copy reveal">Inspired by life.<br />Crafted through design.</p>
         <nav class="footer-links reveal" aria-label="Contact links">
-          <a class="menu-link" href="#contact" aria-label="View Resume"><span>View Resume ↗</span><span>View Resume ↗</span></a>
+          <a class="menu-link" href="${assetPath("public/resume/Elaine-Xu-Product-Designer-Resume-2026.pdf")}" target="_blank" rel="noreferrer" aria-label="View Elaine Xu's resume in a new tab"><span>View Resume ↗</span><span>View Resume ↗</span></a>
           <a class="menu-link" href="mailto:${email}"><span>Email ↗</span><span>Email ↗</span></a>
           <a class="menu-link" href="https://www.linkedin.com/in/elaine-xu-xjy/" target="_blank" rel="noreferrer"><span>LinkedIn ↗</span><span>LinkedIn ↗</span></a>
         </nav>
@@ -615,7 +615,9 @@ function renderLegacyWorkList() {
                   ${
                     project.name === "ABC Silk Care"
                       ? `<span class="abc-archive-hero is-mobile"><img class="abc-archive-sky" src="${assetPath("public/images/abc/hero-cloud-cotton-background.png")}" alt="" /><img class="abc-archive-product" src="${assetPath("public/images/abc/series-cloud-cotton-cutout.png")}" alt="${escapeHtml(project.images[0].alt)}" /></span>`
-                      : `<img src="${assetPath(localImages[project.name] || project.images[0].src)}" alt="${escapeHtml(project.images[0].alt)}" />`
+                      : project.name === "ANX"
+                        ? `<span class="anx-archive-hero is-mobile" aria-label="Rotating three-dimensional ANX logo"><span class="anx-archive-logo-solid"><img class="anx-archive-logo-layer anx-archive-logo-depth depth-01" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" /><img class="anx-archive-logo-layer anx-archive-logo-depth depth-02" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" /><img class="anx-archive-logo-layer anx-archive-logo-depth depth-03" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" /><img class="anx-archive-logo-layer anx-archive-logo-depth depth-04" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" /><img class="anx-archive-logo-layer anx-archive-logo-face" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="ANX logo" /><img class="anx-archive-logo-layer anx-archive-logo-back" src="${assetPath("public/images/anx/anx-logo-transparent.png")}" alt="" /></span></span>`
+                        : `<img src="${assetPath(localImages[project.name] || project.images[0].src)}" alt="${escapeHtml(project.images[0].alt)}" />`
                   }
                 </div>
                 <h3>${escapeHtml(project.name)}</h3>
