@@ -1727,7 +1727,9 @@ function renderFizzCaseStudy() {
             <p class="fizz-content-body">The visual identity was further explored through motion to enhance the refreshing and playful personality of the brand.</p>
           </div>
           <div class="fizz-motion-frame reveal">
-            <video src="${fizzImage("fizz-motion.mp4")}" poster="${fizzImage("raspberry-lifestyle.png")}" autoplay muted loop playsinline preload="metadata" aria-label="Animated FIZZ raspberry sparkling water advertisement"></video>
+            <video poster="${fizzImage("raspberry-lifestyle.png")}" autoplay muted loop playsinline preload="auto" aria-label="Animated FIZZ raspberry sparkling water advertisement">
+              <source src="${fizzImage("fizz-motion-web.mp4")}" type="video/mp4" />
+            </video>
           </div>
         </section>
 

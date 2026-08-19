@@ -2165,6 +2165,11 @@ p {
   --anx-line: rgba(255, 104, 189, 0.24);
   --anx-display-font: "Roslindale", Georgia, serif;
   --anx-body-font: "PP Neue Montreal", Arial, sans-serif;
+  --anx-display-size: clamp(2.52rem, 4.9vw, 5.25rem);
+  --anx-brand-size: clamp(2rem, 3.5vw, 3.6rem);
+  --anx-body-large: clamp(1.18rem, 1.75vw, 1.55rem);
+  --anx-body-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  --anx-label-size: 0.68rem;
   color: var(--anx-ink);
   background: var(--anx-black);
   font-family: var(--anx-body-font);
@@ -2304,7 +2309,7 @@ p {
 .anx-identity-principles span,
 .anx-reflection-grid article > span,
 .anx-page figcaption {
-  font-size: clamp(0.7rem, 0.82vw, 0.88rem);
+  font-size: var(--anx-label-size);
   font-weight: 500;
   letter-spacing: 0.13em;
   line-height: 1.2;
@@ -2352,7 +2357,7 @@ p {
   max-width: 1050px;
   margin: 0;
   font-family: var(--anx-display-font);
-  font-size: clamp(3rem, 6.2vw, 7rem);
+  font-size: var(--anx-display-size);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 0.96;
@@ -2367,8 +2372,8 @@ p {
 .anx-content-row > div,
 .anx-campaign-intro > div {
   max-width: 920px;
-  font-size: clamp(1.25rem, 2.05vw, 2rem);
-  line-height: 1.38;
+  font-size: var(--anx-body-large);
+  line-height: 1.48;
 }
 
 .anx-content-row p,
@@ -2420,7 +2425,7 @@ p {
   margin: 0;
   color: var(--anx-ink);
   font-family: var(--anx-body-font);
-  font-size: clamp(1.65rem, 2.9vw, 3.25rem);
+  font-size: var(--anx-body-large);
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.16;
@@ -2428,11 +2433,11 @@ p {
 
 .anx-concept .anx-section-heading h2 {
   max-width: 900px;
-  font-family: var(--anx-body-font);
-  font-size: clamp(2.65rem, 4.8vw, 5.4rem);
-  font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 1.02;
+  font-family: var(--anx-display-font);
+  font-size: var(--anx-display-size);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
 }
 
 .anx-manifesto-grid {
@@ -2453,7 +2458,7 @@ p {
   display: block;
   color: var(--anx-pink);
   font-family: var(--anx-display-font);
-  font-size: clamp(7rem, 15vw, 14rem);
+  font-size: clamp(4.5rem, 9vw, 8rem);
   font-weight: 400;
   letter-spacing: -0.08em;
   line-height: 0.75;
@@ -2472,7 +2477,7 @@ p {
   max-width: 520px;
   margin: 0;
   color: var(--anx-muted);
-  font-size: clamp(1.05rem, 1.55vw, 1.5rem);
+  font-size: var(--anx-body-size);
   line-height: 1.5;
 }
 
@@ -2480,8 +2485,8 @@ p {
   max-width: 980px;
   margin: 0 auto clamp(6rem, 10vw, 10rem);
   color: var(--anx-ink);
-  font-family: var(--anx-body-font);
-  font-size: clamp(2rem, 3.9vw, 4.4rem);
+  font-family: var(--anx-display-font);
+  font-size: var(--anx-brand-size);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.12;
@@ -2553,7 +2558,7 @@ p {
   margin: 0;
   color: var(--anx-ink);
   font-family: var(--anx-display-font);
-  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-size: var(--anx-display-size);
   font-weight: 400;
   line-height: 0.98;
 }
@@ -2599,7 +2604,7 @@ p {
 .anx-creative-grid h4 {
   margin: 0 0 1rem;
   color: var(--anx-ink);
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
   font-weight: 500;
 }
 
@@ -2608,7 +2613,7 @@ p {
   max-width: 650px;
   margin: 0;
   color: var(--anx-muted);
-  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  font-size: var(--anx-body-size);
   line-height: 1.5;
 }
 
@@ -2679,7 +2684,7 @@ p {
   margin: 0;
   color: var(--anx-ink);
   font-family: var(--anx-display-font);
-  font-size: clamp(2.4rem, 5vw, 5.4rem);
+  font-size: var(--anx-display-size);
   font-weight: 400;
   line-height: 0.98;
 }
@@ -2939,14 +2944,14 @@ p {
 .anx-direction-grid h3 {
   margin: 0 0 1rem;
   color: var(--anx-ink);
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
   font-weight: 500;
 }
 
 .anx-direction-grid p {
   margin: 0;
   color: var(--anx-muted);
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-size: var(--anx-body-size);
   line-height: 1.5;
 }
 
@@ -3153,7 +3158,7 @@ p {
 .anx-reflection-grid h3 {
   margin: 2rem 0 1.2rem;
   font-family: var(--anx-display-font);
-  font-size: clamp(2.1rem, 4vw, 4.6rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
   font-weight: 400;
   line-height: 1;
 }
@@ -3161,7 +3166,7 @@ p {
 .anx-reflection-grid p {
   max-width: 650px;
   margin: 0;
-  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  font-size: var(--anx-body-size);
   line-height: 1.5;
 }
 
@@ -3248,6 +3253,17 @@ p {
 
   .anx-section-heading {
     margin-bottom: 4rem;
+  }
+
+  .anx-mission > p:last-child,
+  .anx-content-row > p:not(.anx-content-label),
+  .anx-content-row > div,
+  .anx-campaign-intro > div {
+    font-size: 1.08rem;
+  }
+
+  .anx-statement {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
   }
 
   .anx-manifesto-grid,
@@ -5330,6 +5346,10 @@ p {
 }
 
 .footer {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: max(30px, calc((100vw - 1380px) / 2));
   padding-top: calc(12rem + 20px);
   padding-bottom: 30px;
 }
