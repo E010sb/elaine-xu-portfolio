@@ -1260,8 +1260,8 @@ function renderMizoneCaseStudy() {
           <div class="mizone-section-index">08</div>
           <div class="mizone-section-heading reveal"><p>Design Reflection</p></div>
           <div class="mizone-reflection-grid">
-            <article class="reveal"><span>01</span><h3>What Worked</h3><strong>A balance between brand consistency and seasonal innovation</strong><p>The design preserved Mizone’s recognizable visual identity while introducing a fresh spring-inspired expression through botanical graphics, natural textures, and outdoor storytelling.</p></article>
-            <article class="reveal"><span>02</span><h3>Future Opportunities</h3><strong>Creating deeper consumer interactions</strong><p>Future campaigns could extend the packaging experience through digital touchpoints such as AR activations or social media interactions, encouraging more engagement beyond the physical product.</p></article>
+            <article class="reveal"><span>01</span><h3>What Worked</h3><p>The design preserved Mizone’s recognizable visual identity while introducing a fresh spring-inspired expression through botanical graphics, natural textures, and outdoor storytelling.</p></article>
+            <article class="reveal"><span>02</span><h3>Future Opportunities</h3><p>Future campaigns could extend the packaging experience through digital touchpoints such as AR activations or social media interactions, encouraging more engagement beyond the physical product.</p></article>
           </div>
         </section>
       </main>
@@ -1463,7 +1463,6 @@ function renderAnxCaseStudy() {
             <article><strong>AN</strong><span>Familiarity / Calm / Foundation</span><p>Drawn from the Chinese character 安, “AN” represents safety, stability, and the grounding force of identity.</p></article>
             <article><strong>X</strong><span>Risk / Experimentation / Unknown</span><p>“X” represents uncertainty: the future-facing territory where convention breaks and new identities emerge.</p></article>
           </div>
-          <blockquote class="anx-statement reveal">Together, ANX creates a space where individuals move beyond traditional expectations without losing their foundation.</blockquote>
           <div class="anx-mood-grid"><figure class="reveal"><img src="${anxImage("mood-01.jpg")}" alt="ANX beauty and fashion mood references" /></figure><figure class="reveal"><img src="${anxImage("mood-02.jpg")}" alt="ANX experimental streetwear and youth culture references" /></figure></div>
           <div class="anx-audience reveal">
             <header><p>Target Audience</p><h3>A global creative generation living between cultures.</h3></header>
@@ -1483,7 +1482,7 @@ function renderAnxCaseStudy() {
           <div class="anx-identity-principles reveal"><span>Distorted Typography</span><span>Experimental Forms</span><span>Futuristic Textures</span><span>Bold Contrast</span></div>
           <div class="anx-identity-extracted">
             <section class="anx-identity-spec anx-logo-spec reveal">
-              <header class="anx-spec-heading"><span>01</span><div><p>Logo System</p><h3>One mark, three scales.</h3></div></header>
+              <header class="anx-spec-heading"><span>01</span><div><p>Logo System</p></div></header>
               <div class="anx-logo-variant-grid">
                 <figure class="anx-logo-variant anx-logo-variant-dark"><img src="${anxImage("anx-logo-transparent.png")}" alt="ANX black logo" /><figcaption>Primary / Black</figcaption></figure>
                 <figure class="anx-logo-variant anx-logo-variant-light"><img src="${anxImage("anx-logo-transparent.png")}" alt="ANX white logo" /><figcaption>Reverse / White</figcaption></figure>
@@ -1496,7 +1495,7 @@ function renderAnxCaseStudy() {
             </section>
 
             <section class="anx-identity-spec anx-type-spec reveal">
-              <header class="anx-spec-heading"><span>02</span><div><p>Typography</p><h3>Editorial impact, functional clarity.</h3></div></header>
+              <header class="anx-spec-heading"><span>02</span><div><p>Typography</p></div></header>
               <div class="anx-type-grid">
                 <article>
                   <p class="anx-type-role">Display Font</p>
@@ -1514,7 +1513,7 @@ function renderAnxCaseStudy() {
             </section>
 
             <section class="anx-identity-spec anx-color-spec reveal">
-              <header class="anx-spec-heading"><span>03</span><div><p>Color Palette</p><h3>Black / Pink / White / Violet</h3></div></header>
+              <header class="anx-spec-heading"><span>03</span><div><p>Color Palette</p></div></header>
               <div class="anx-swatch-grid">
                 <article class="anx-swatch anx-swatch-pink"><span>Pink</span><strong>#FA7DCC</strong></article>
                 <article class="anx-swatch anx-swatch-black"><span>Black</span><strong>#000000</strong></article>
@@ -1583,7 +1582,7 @@ function renderAnxCaseStudy() {
         <section class="anx-section anx-reflection">
           <span class="anx-section-index">08</span>
           <header class="anx-section-heading reveal"><p>Project Reflection</p><h2>Design Reflection</h2></header>
-          <div class="anx-reflection-grid"><article class="reveal"><span>What Worked</span><h3>A complete world, not just a mark.</h3><p>This project allowed me to explore how a fashion brand can be developed beyond visual identity, creating a connected ecosystem across products, campaigns, spaces, and digital experiences.</p></article><article class="reveal"><span>Future Opportunities</span><h3>From concept to cultural platform.</h3><p>Future development could explore real-world collaborations, digital fashion experiences, and immersive brand activations that invite audiences to shape the ANX universe.</p></article></div>
+          <div class="anx-reflection-grid"><article class="reveal"><span>What Worked</span><p>This project allowed me to explore how a fashion brand can be developed beyond visual identity, creating a connected ecosystem across products, campaigns, spaces, and digital experiences.</p></article><article class="reveal"><span>Future Opportunities</span><p>Future development could explore real-world collaborations, digital fashion experiences, and immersive brand activations that invite audiences to shape the ANX universe.</p></article></div>
         </section>
       </main>
       ${renderFooter()}

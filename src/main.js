@@ -1305,13 +1305,11 @@ function renderMizoneCaseStudy() {
             <article class="reveal">
               <span>01</span>
               <h3>What Worked</h3>
-              <strong>A balance between brand consistency and seasonal innovation</strong>
               <p>The design preserved Mizone’s recognizable visual identity while introducing a fresh spring-inspired expression through botanical graphics, natural textures, and outdoor storytelling.</p>
             </article>
             <article class="reveal">
               <span>02</span>
               <h3>Future Opportunities</h3>
-              <strong>Creating deeper consumer interactions</strong>
               <p>Future campaigns could extend the packaging experience through digital touchpoints such as AR activations or social media interactions, encouraging more engagement beyond the physical product.</p>
             </article>
           </div>
