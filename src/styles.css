@@ -501,6 +501,12 @@ p {
   padding-bottom: 20px;
 }
 
+.hero-copy .kicker {
+  display: block;
+  color: var(--muted);
+  text-align: center;
+}
+
 .hero-nav {
   grid-column: 10 / span 3;
   display: flex;
@@ -5882,9 +5888,8 @@ p {
     padding-top: 30px;
   }
 
-  .hero-grid .kicker {
+  .hero-copy .kicker {
     display: block;
-    margin-bottom: 18px;
     font-size: 0.7rem;
     line-height: 1.25;
   }
