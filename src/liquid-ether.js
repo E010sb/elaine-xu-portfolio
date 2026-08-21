@@ -94,10 +94,10 @@ if (mount && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       void main() {
         vec2 velocityValue = texture2D(velocity, vUv).xy;
         float speed = length(velocityValue);
-        float intensity = smoothstep(0.006, 0.22, speed);
-        float glow = smoothstep(0.0, 0.16, speed);
+        float intensity = smoothstep(0.0015, 0.12, speed);
+        float glow = smoothstep(0.0, 0.08, speed);
         vec3 color = palette(clamp(speed * 4.0, 0.0, 1.0));
-        float alpha = intensity * 0.54 + glow * 0.08;
+        float alpha = intensity * 0.82 + glow * 0.2;
         gl_FragColor = vec4(color, alpha);
       }
     `,
@@ -179,10 +179,10 @@ if (mount && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     pointer.lerp(targetPointer, easing);
     pointerVelocity.subVectors(pointer, previousPointer);
     previousPointer.copy(pointer);
-    pointerVelocity.multiplyScalar(idle ? 7.5 : 12.0);
+    pointerVelocity.multiplyScalar(idle ? 18.0 : 22.0);
 
     simulationMaterial.uniforms.velocity.value = velocityA.texture;
-    simulationMaterial.uniforms.inject.value = Math.min(1.35, Math.max(0.18, pointerVelocity.length() * 18));
+    simulationMaterial.uniforms.inject.value = Math.min(1.8, Math.max(0.48, pointerVelocity.length() * 24));
     renderer.setRenderTarget(velocityB);
     renderer.render(simulationScene, camera);
 

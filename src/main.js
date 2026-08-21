@@ -1840,9 +1840,9 @@ function renderHome() {
           <div class="hero-inner">
             <div class="hero-logo reveal">${logoMark}</div>
             <div class="hero-grid">
+              <p class="kicker reveal">Product Designer<br />Graphic Designer</p>
               <div class="hero-copy reveal">
                 <h1>Designing thoughtful products<br /> and bold visual experiences.</h1>
-                <p class="kicker">Product Designer / Graphic Designer</p>
               </div>
             </div>
           </div>

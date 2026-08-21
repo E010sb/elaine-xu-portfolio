@@ -433,14 +433,26 @@ p {
   overflow: hidden;
 }
 
+.home-page .hero {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+
 .hero-liquid {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0;
-  animation: fadeIn 1s ease 0.6s forwards;
+  opacity: 1;
+  background:
+    radial-gradient(ellipse at 14% 18%, rgba(82, 39, 255, 0.22), transparent 42%),
+    radial-gradient(ellipse at 82% 24%, rgba(255, 159, 252, 0.28), transparent 40%),
+    radial-gradient(ellipse at 68% 82%, rgba(180, 151, 207, 0.3), transparent 44%),
+    radial-gradient(ellipse at 24% 76%, rgba(82, 39, 255, 0.13), transparent 38%);
+  background-size: 125% 125%;
+  animation: liquidAmbient 14s ease-in-out infinite alternate;
   isolation: isolate;
 }
 
@@ -448,6 +460,15 @@ p {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+@keyframes liquidAmbient {
+  0% {
+    background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%;
+  }
+  100% {
+    background-position: 10% 14%, 88% 18%, 82% 88%, 14% 84%;
+  }
 }
 
 .hero::before {
@@ -463,6 +484,12 @@ p {
 .hero-inner {
   position: relative;
   z-index: 2;
+}
+
+.home-page .hero-inner {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding-inline: 30px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -499,12 +526,6 @@ p {
 
 .hero-copy h1 {
   padding-bottom: 20px;
-}
-
-.hero-copy .kicker {
-  display: block;
-  color: var(--muted);
-  text-align: center;
 }
 
 .hero-nav {
@@ -5888,10 +5909,15 @@ p {
     padding-top: 30px;
   }
 
-  .hero-copy .kicker {
+  .hero-grid .kicker {
     display: block;
+    margin-bottom: 18px;
     font-size: 0.7rem;
     line-height: 1.25;
+  }
+
+  .home-page .hero-inner {
+    padding-inline: 16px;
   }
 
   .section {
