@@ -247,6 +247,14 @@ p {
   transition: border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease, opacity 0.28s ease;
 }
 
+.home-page > .global-nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
 .global-nav::before {
   content: "";
   position: absolute;
@@ -5648,8 +5656,7 @@ p {
 }
 
 @media (max-width: 1023px) {
-  .header nav,
-  .kicker {
+  .header nav {
     display: none;
   }
 
@@ -5855,6 +5862,10 @@ p {
     padding: 5px;
   }
 
+  .home-page > .global-nav {
+    top: 12px;
+  }
+
   .global-nav::before {
     inset-inline: 12px;
     height: 16px;
@@ -5869,6 +5880,13 @@ p {
 
   .hero-logo {
     padding-top: 30px;
+  }
+
+  .hero-grid .kicker {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+    line-height: 1.25;
   }
 
   .section {

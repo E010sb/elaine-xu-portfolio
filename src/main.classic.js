@@ -1763,7 +1763,7 @@ function renderFizzCaseStudy() {
 
 function renderHome() {
   app.innerHTML = `
-    <div class="site light-theme">
+    <div class="site light-theme home-page">
       ${renderGlobalNav()}
       <main>
         <section class="hero">
