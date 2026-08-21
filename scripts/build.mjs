@@ -24,9 +24,11 @@ for (const path of pathsToPublish) {
 const threeBuildDirectory = new URL("../node_modules/three/build/", import.meta.url);
 const publishedThreeDirectory = new URL("node_modules/three/build/", outputDirectory);
 await mkdir(publishedThreeDirectory, { recursive: true });
-await cp(
-  new URL("three.module.min.js", threeBuildDirectory),
-  new URL("three.module.min.js", publishedThreeDirectory),
-);
+for (const file of ["three.module.min.js", "three.core.min.js"]) {
+  await cp(
+    new URL(file, threeBuildDirectory),
+    new URL(file, publishedThreeDirectory),
+  );
+}
 
 console.log("Static portfolio prepared in dist/.");
