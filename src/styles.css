@@ -425,18 +425,42 @@ p {
   overflow: hidden;
 }
 
-.hero-canvas {
+.hero-liquid {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
   opacity: 0;
   animation: fadeIn 1s ease 0.6s forwards;
+  isolation: isolate;
+}
+
+.hero-liquid canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 159, 252, 0.16), transparent 28%),
+    radial-gradient(circle at 82% 72%, rgba(82, 39, 255, 0.12), transparent 30%);
+  pointer-events: none;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-liquid {
+    display: none;
+  }
 }
 
 .hero-logo {

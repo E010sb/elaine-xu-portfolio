@@ -1767,7 +1767,7 @@ function renderHome() {
       ${renderGlobalNav()}
       <main>
         <section class="hero">
-          <canvas class="hero-canvas" data-hero-canvas aria-hidden="true"></canvas>
+          <div class="hero-liquid" data-liquid-ether aria-hidden="true"></div>
           <div class="hero-inner">
             <div class="hero-logo reveal">${logoMark}</div>
             <div class="hero-grid">
